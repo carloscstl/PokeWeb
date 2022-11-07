@@ -1,0 +1,22 @@
+body {
+  background-image: url("../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sombra {
+  box-shadow: -1px 10px 29px 11px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -1px 10px 29px 11px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -1px 10px 29px 11px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Nav Bar */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
