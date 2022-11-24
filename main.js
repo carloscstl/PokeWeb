@@ -5,22 +5,21 @@ const pokemon_name = document.querySelector(".pokemon-name");
 const pokemon_img = document.querySelector("#pokemon-image");
 const type_list = document.querySelector(".type-list");
 
+const putValues = (pokemon) => {
+  pokemon_name.innerHTML = `${pokemon.id} - ${pokemon.name}`;
+  pokemon_img.src = `${pokemon.sprites.front_default}`;
+  const tpl = pokemon.types.map((type) => `<li>${type.type.name}</li>`);
+  type_list.innerHTML = `${tpl}`;
+};
+
 fetch(`${API_URL}/pokemon/1`)
   .then((response) => response.json())
-  .then((pokemon) => {
-    pokemon_name.innerHTML = `${pokemon.id} - ${pokemon.name}`;
-    pokemon_img.src = `${pokemon.sprites.front_default}`;
-    type_list.innerHTML = `<li>${pokemon.types[0].type.name}</li>`;
-  });
+  .then((pokemon) => putValues(pokemon));
 
 function printValue() {
-  const pokemon = searchQuery.value;
+  let pokemon = searchQuery.value;
+  pokemon = pokemon.toLowerCase();
   fetch(`${API_URL}/pokemon/${pokemon}`)
     .then((response) => response.json())
-    .then((pokemon) => {
-      pokemon_name.innerHTML = `${pokemon.id} - ${pokemon.name}`;
-      pokemon_img.src = `${pokemon.sprites.front_default}`;
-      type_list.innerHTML = `<li>${pokemon.types[0].type.name}</li>`;
-      console.log(pokemon.abilities);
-    });
+    .then((pokemon) => putValues(pokemon));
 }
