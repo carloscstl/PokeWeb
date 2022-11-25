@@ -5,7 +5,15 @@
   --lightgray: #ededed;
   --red: #b90000;
 
-  --gree: #92f181;
+  --gree: #A33EA1;
+}
+
+/* *{
+  border: 1px solid black;
+} */
+
+*{
+  font-family: "Podkova", serif;
 }
 
 html {
@@ -32,8 +40,6 @@ a {
   margin: 2rem auto;
   background-color: var(--lightgray);
   padding: 1.5rem;
-  /* display: flex;
-  justify-content: center; */
   border-radius: 2.7rem;
 }
 .title {
@@ -104,6 +110,7 @@ a {
 .table,
 th {
   border: 1px solid;
+  font-family: "Podkova", serif;
 }
 
 .table-bg {
@@ -124,6 +131,7 @@ th {
 .table-row {
   height: 8rem;
   background-color: var(--gray);
+  list-style-type: none;
 }
 
 /*! Pokedex */
@@ -178,11 +186,9 @@ th {
 .type-list>li{
   margin: 2rem;
   list-style-type: none;
-  background-color: var(--gree);
   padding: 0.4rem 1.6rem;
   font-weight: bold;
   color: var(--white);
-  /* -webkit-text-stroke: 1px black; */
   border: 2px solid black;
   -webkit-user-select: none;
 	-khtml-user-select: none;
@@ -190,4 +196,80 @@ th {
 	-o-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+.pokemon-measures{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.pokemon-abilities{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.abilities-list>li{
+  font-size: 1.8rem;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.normal{
+  background-color: #A8A77A;
+}
+.fire{
+  background-color: #EE8130;
+}
+.water{
+  background-color: #6390F0;
+}
+.electric{
+  background-color: #F7D02C;
+}
+.grass{
+  background-color: #7AC74C;
+}
+.ice{
+  background-color: #96D9D6;
+}
+.fighting{
+  background-color: #C22E28;
+}
+.poison{
+  background-color: #A33EA1;
+}
+.ground{
+  background-color: #E2BF65;
+}
+.flying{
+  background-color: #A98FF3;
+}
+.psychic{
+  background-color: #F95587;
+}
+.bug{
+  background-color: #A6B91A;
+}
+.rock{
+  background-color: #B6A136;
+}
+.ghost{
+  background-color: #735797;
+}
+.dragon{
+  background-color: #6F35FC;
+}
+.dark{
+  background-color: #705746;
+}
+.steel{
+  background-color: #B7B7CE;
+}
+.fairy{
+  background-color: #D685AD;
 }

@@ -45,27 +45,33 @@
 
       <div class="search-bar">
         <input type="text" placeholder="Search" id="searchQueryInput" />
-        <input type="button" value="Buscar" onclick="printValue()" />
+        <input
+          type="button"
+          value="Buscar"
+          class="button"
+          onclick="printValue()"
+        />
       </div>
 
       <div class="table-bg">
         <table class="table">
           <tr class="row-header">
             <th>Tipo</th>
-            <th>Eficaz Contra</th>
-            <th>Debil a</th>
             <th>Vulnerable a</th>
-            <th>Inmune a</th>
+            <th>Super Eficaz Contra</th>
+            <th>Debil a</th>
+            <th>Eficaz Contra</th>
           </tr>
-          <tr class="table-row">
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
+          <tr class="table-row display-6">
+            <th class="table__column--type"></th>
+            <th class="table__damage--from"></th>
+            <th class="table__damage--to"></th>
+            <th class="table__half--from"></th>
+            <th class="table__half--to"></th>
           </tr>
         </table>
       </div>
     </div>
+    <script src="./table.js"></script>
   </body>
 </html>
